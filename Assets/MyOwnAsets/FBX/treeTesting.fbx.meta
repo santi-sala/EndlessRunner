@@ -8,7 +8,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: myAtlasMaterial
-    second: {fileID: 2100000, guid: 05d477373288a4e888afbcfa1b4ff0da, type: 2}
+    second: {fileID: 2100000, guid: 8f44af8af2d404ac98d0572d17c39a35, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: myAtlasMaterial.001
+    second: {fileID: 2100000, guid: 8f44af8af2d404ac98d0572d17c39a35, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
