@@ -67,7 +67,7 @@ public class WorldGeneration : MonoBehaviour
         int randomIndex = Random.Range(0, worldChunkPrefabs.Count);
 
         //Does it already exist in the pool?
-        WorldChunk worldChunk = null;
+        WorldChunk worldChunk = worldChunksPool.Find(spawnWorldChunk => !spawnWorldChunk.gameObject.activeSelf && spawnWorldChunk.name == (worldChunkPrefabs[randomIndex].name + "(Clone)"));
 
         //Create a worldChunk if theres none to reuse
         if (!worldChunk)

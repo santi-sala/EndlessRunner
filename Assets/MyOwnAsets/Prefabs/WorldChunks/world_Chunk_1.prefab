@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 3265303578871394632}
   - component: {fileID: 3664692779540488145}
   m_Layer: 0
-  m_Name: prefab_Chunk_1
+  m_Name: world_Chunk_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
