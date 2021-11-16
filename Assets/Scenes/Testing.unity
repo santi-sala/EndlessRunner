@@ -778,8 +778,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1737168169}
-  m_LocalRotation: {x: -0.16721025, y: -0.0026848614, z: 0.00045834482, w: -0.9859175}
-  m_LocalPosition: {x: -0.14484309, y: 1.4867265, z: -1.1621542}
+  m_LocalRotation: {x: 0.08384558, y: -0.03646451, z: 0.0030701081, w: 0.99580663}
+  m_LocalPosition: {x: -0.38637936, y: 2.7172773, z: -5.091712}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -924,6 +924,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2134576606}
   - component: {fileID: 2134576605}
+  - component: {fileID: 2134576607}
   m_Layer: 0
   m_Name: WorldGeneration
   m_TagString: Untagged
@@ -965,6 +966,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2134576607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134576604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5b821f9be42c409081e8189176bfa37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstWorldChunkSpawnPosition: 5
+  worldChunksOnScreen: 10
+  despawnDistance: 5
+  worldChunkPrefabs:
+  - {fileID: 4943716798900673778, guid: bdce967cf9dfd4bf9a021ea21d06d268, type: 3}
+  - {fileID: 9120130993763021651, guid: f1fcccae88ad94463bd2fac866d6102f, type: 3}
+  cameraTransform: {fileID: 1737168172}
 --- !u!1001 &1960492132279760535
 PrefabInstance:
   m_ObjectHideFlags: 0
