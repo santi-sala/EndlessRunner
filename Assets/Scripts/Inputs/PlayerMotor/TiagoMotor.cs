@@ -14,13 +14,15 @@ public class TiagoMotor : MonoBehaviour
     public float terminalVelocity = 20.0f;
 
     public CharacterController controller;
-
+    public Animator animator;
     //State
     private BaseState state;
 
+    //Start
     private void Start()
     {
         controller = GetComponent<CharacterController>();
+        animator = GetComponent<Animator>();
 
         //State
         state = GetComponent<RunningState>();
@@ -42,6 +44,10 @@ public class TiagoMotor : MonoBehaviour
 
         //State (Changing state?)
         state.Transition();
+
+        //
+        animator?.SetBool("IsGrounded", isGrounded);
+        animator?.SetFloat("Speed", Mathf.Abs(moveVector.z));
 
         // Moving Tiago
         controller.Move(moveVector * Time.deltaTime);
@@ -82,6 +88,16 @@ public class TiagoMotor : MonoBehaviour
         state.Destruct();
         state = newState;
         state.Construct();
+    }
+
+    public void ApplyGravity()
+    {
+        verticalVelocity -= gravity * Time.deltaTime;
+
+        if (verticalVelocity < -terminalVelocity)
+        {
+            verticalVelocity = -terminalVelocity;
+        }
     }
 
 }

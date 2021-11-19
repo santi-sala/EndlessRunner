@@ -4,13 +4,13 @@ public abstract class BaseState : MonoBehaviour
 {
     protected TiagoMotor tiagoMotor;
 
-    //Entering state
+    // Entering state
     public virtual void Construct(){}
 
-    //Leaving State
+    // Leaving State
     public virtual void Destruct(){}
 
-    //Be called in constatntly in the update loop for changes in thecurrent state
+    // Be called in constatntly in the update loop for changes in the current state
     public virtual void Transition(){}
 
     private void Awake()

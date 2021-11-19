@@ -2,6 +2,12 @@ using UnityEngine;
 
 public class RunningState : BaseState
 {
+    //Reseting the vertical velocity everytime we start running 
+    public override void Construct()
+    {
+        tiagoMotor.verticalVelocity = 0f;
+    }
+
     public override Vector3 ProcessMotion()
     {
         Vector3 movement = Vector3.zero;
@@ -14,6 +20,8 @@ public class RunningState : BaseState
 
         //Speed running
         movement.z = tiagoMotor.baseRunSpeed;
+
+        
 
         return movement;
     }
@@ -32,7 +40,17 @@ public class RunningState : BaseState
 
         if (InputManager.Instance._SwipeUp && tiagoMotor.isGrounded)
         {
-            //tiagoMotor.ChangeState(GetComponent<JumpingState>());
+            tiagoMotor.ChangeState(GetComponent<JumpingState>());
+        }
+
+        if (!tiagoMotor.isGrounded)
+        {
+            tiagoMotor.ChangeState(GetComponent<FallingState>());
+        }
+
+        if (InputManager.Instance._SwipeDown)
+        {
+            tiagoMotor.ChangeState(GetComponent<SlidingState>());
         }
     }
 }
