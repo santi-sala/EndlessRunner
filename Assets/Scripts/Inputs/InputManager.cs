@@ -80,10 +80,12 @@ public class InputManager : MonoBehaviour
                 if (drag.x > 0)
                 {
                     swipeRight = true;
+                    Debug.Log("swipeRight");
                 }
                 else
                 {
                     swipeLeft = true;
+                    Debug.Log("swipeLeft");
                 }
             }
             else
@@ -91,10 +93,12 @@ public class InputManager : MonoBehaviour
                 if (drag.y > 0)
                 {
                     swipeUp = true;
+                    Debug.Log("swipeUp");
                 }
                 else
                 {
                     swipeDown = true;
+                    Debug.Log("swipeDown");
                 }
             }
         }
