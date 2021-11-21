@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class TiagoMotor : MonoBehaviour
@@ -10,28 +11,39 @@ public class TiagoMotor : MonoBehaviour
     public float distanceInbetweenLanes = 3.0f;
     public float baseRunSpeed = 5.0f;
     public float switchLaneSpeed = 10.0f;
+
     public float gravity = 14.0f;
     public float terminalVelocity = 20.0f;
 
     public CharacterController controller;
     public Animator animator;
-    //State
+
+    // State --> Player
     private BaseState state;
 
-    //Start
+    // State --> Game
+    private bool isPaused;
+
+    // Start
     private void Start()
     {
         controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
 
-        //State
+        // State --> Player
         state = GetComponent<RunningState>();
         state.Construct();
+
+        // State --> Game
+        isPaused = true;
     }
 
     private void Update()
     {
-        UpdateMotor();
+        if (!isPaused)
+        {
+            UpdateMotor();
+        }
     }
 
     private void UpdateMotor()
@@ -39,10 +51,10 @@ public class TiagoMotor : MonoBehaviour
         // Check if grounded (Cahing it)
         isGrounded = controller.isGrounded;
 
-        //State (Movement based on states)
+        //State --> Player (Movement based on states)
         moveVector = state.ProcessMotion();
 
-        //State (Changing state?)
+        //State --> Player (Changing state?)
         state.Transition();
 
         //
@@ -97,6 +109,35 @@ public class TiagoMotor : MonoBehaviour
         if (verticalVelocity < -terminalVelocity)
         {
             verticalVelocity = -terminalVelocity;
+        }
+    }
+
+
+    // State --> Game
+    public void PausePlayer()
+    {
+        isPaused = true;
+    }
+
+    public void ResumePlayer()
+    {
+        isPaused = false;
+    }
+
+    public void RespawnTiago()
+    {
+        ChangeState(GetComponent<RespawnState>());        
+    }
+
+
+    // Detecting Collisions
+    public void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        string hitLayerName = LayerMask.LayerToName(hit.gameObject.layer);
+
+        if (hitLayerName == "Death")
+        {
+            ChangeState(GetComponent<DeathState>());
         }
     }
 

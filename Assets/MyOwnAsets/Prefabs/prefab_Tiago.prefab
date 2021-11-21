@@ -1469,10 +1469,12 @@ GameObject:
   - component: {fileID: 4753778263206685338}
   - component: {fileID: 2642318850615532002}
   - component: {fileID: 2144052373275066437}
+  - component: {fileID: 201151992}
+  - component: {fileID: 9059032566690119265}
   m_Layer: 0
   m_Name: prefab_Tiago
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1565,6 +1567,7 @@ MonoBehaviour:
   gravity: 14
   terminalVelocity: 20
   controller: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!114 &1150951723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1615,6 +1618,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slideDuration: 1
+--- !u!114 &201151992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7797002741748217998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cad4bd5f1fa5481086332641323274e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockBackForce: {x: 0, y: 15, z: -2}
+--- !u!114 &9059032566690119265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7797002741748217998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4770d5438e48040f2be1d7c25bf4f0d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7873493368231131131
 GameObject:
   m_ObjectHideFlags: 0
