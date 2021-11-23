@@ -67,10 +67,17 @@ public class InputManager : MonoBehaviour
     private void OnEndDrag(InputAction.CallbackContext context)
     {
         Vector2 drag = touchPosition - startDrag;
+
+        //Debug.Log("Touch position = " + touchPosition);
+        //Debug.Log("StartDrag = " + startDrag);
+        //Debug.Log("Drag is: " + drag);
         float sqrDistance = drag.sqrMagnitude;
+
+        //Debug.Log("Drag distance = " + sqrDistance);
 
         if (sqrDistance > sqrSwipeDeadzone)
         {
+            Debug.Log("Drag distance = " + sqrDistance);
             float x = Mathf.Abs(drag.x);
             float y = Mathf.Abs(drag.y);
 
@@ -101,6 +108,11 @@ public class InputManager : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            Debug.Log("No drag");
+            Debug.Log("Drag distance = " + sqrDistance);
+        }
 
         startDrag = Vector2.zero;
     }
@@ -108,16 +120,19 @@ public class InputManager : MonoBehaviour
     private void OnStartDrag(InputAction.CallbackContext context)
     {
         startDrag = touchPosition;
+        //Debug.Log("Drag Started!!");
     }
 
     private void OnTapPosition(InputAction.CallbackContext context)
     {
         touchPosition = context.ReadValue<Vector2>();
+        //Debug.Log("Tap position = " + touchPosition);
     }
 
     private void OnTap(InputAction.CallbackContext context)
     {
         tap = true;
+        //Debug.Log("Im tapping!!");
     }
 
     public void OnEnable()

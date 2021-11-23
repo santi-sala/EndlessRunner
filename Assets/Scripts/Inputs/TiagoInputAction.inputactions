@@ -3,12 +3,12 @@
     "maps": [
         {
             "name": "Gameplay",
-            "id": "a5231746-5cf5-42b2-8fba-1a9b30c43b5b",
+            "id": "00088d3b-184d-44f3-adec-470f85c42c6f",
             "actions": [
                 {
                     "name": "Touch",
                     "type": "Button",
-                    "id": "9d6e4bba-8eaa-4248-b935-73e96d73d799",
+                    "id": "34bf0bc7-0311-484f-bad7-ecdc79344961",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Press"
@@ -16,7 +16,7 @@
                 {
                     "name": "TouchPosition",
                     "type": "PassThrough",
-                    "id": "e72ed921-cf6e-452a-b393-7885aac854b3",
+                    "id": "f1b36fea-745c-4ac4-b869-fb5d6e463fdd",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
@@ -24,24 +24,24 @@
                 {
                     "name": "StartDrag",
                     "type": "PassThrough",
-                    "id": "d8b4aceb-1e29-4a24-a1d9-f7caf8d65495",
+                    "id": "1684a313-0ab4-44ff-92dd-de3d5d435002",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press"
                 },
                 {
                     "name": "EndDrag",
                     "type": "PassThrough",
-                    "id": "6eba29bc-2cbe-4efb-844d-bf59eae7a165",
+                    "id": "89056f40-f5e4-49bc-92aa-d1c1050420ad",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press(behavior=1)"
                 }
             ],
             "bindings": [
                 {
                     "name": "",
-                    "id": "914034c4-261e-4d27-991c-d7f1c916fbbc",
+                    "id": "f3f1fb0a-9ecd-46aa-a78a-160f284cb7df",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
@@ -52,7 +52,7 @@
                 },
                 {
                     "name": "",
-                    "id": "77427e25-5287-4a4b-86b3-63854b3392e1",
+                    "id": "4a244ce8-2053-408e-9f65-2fa4411078d9",
                     "path": "<Touchscreen>/touch*/tap",
                     "interactions": "",
                     "processors": "",
@@ -63,7 +63,7 @@
                 },
                 {
                     "name": "",
-                    "id": "1d3f3308-4805-4601-9177-8e0c613baac0",
+                    "id": "85866b17-7aa6-447f-a6d0-19704a7d3067",
                     "path": "<Mouse>/position",
                     "interactions": "",
                     "processors": "",
@@ -74,7 +74,7 @@
                 },
                 {
                     "name": "",
-                    "id": "e1ffa3f0-f5a1-44a7-a7cc-14526e2731cf",
+                    "id": "455d2712-6cab-482b-ad55-e2862176d503",
                     "path": "<Touchscreen>/position",
                     "interactions": "",
                     "processors": "",
@@ -85,31 +85,9 @@
                 },
                 {
                     "name": "",
-                    "id": "51fc5c3c-57e4-4684-b612-1ba6ade2fb00",
+                    "id": "4da95e7f-710a-477f-8db1-d0a2b485ca93",
                     "path": "<Mouse>/leftButton",
-                    "interactions": "Press",
-                    "processors": "",
-                    "groups": "Mac",
-                    "action": "StartDrag",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "8586611e-11c0-419e-b56b-707fb73ee1c4",
-                    "path": "<Touchscreen>/touch*/tap",
                     "interactions": "",
-                    "processors": "",
-                    "groups": "Mobile",
-                    "action": "StartDrag",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "1ff74707-0570-41f7-826b-683c10d3666f",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "Press(behavior=1)",
                     "processors": "",
                     "groups": "Mac",
                     "action": "EndDrag",
@@ -118,12 +96,34 @@
                 },
                 {
                     "name": "",
-                    "id": "0ce28cfe-b4e8-4224-8657-5277c585dc55",
+                    "id": "16ea050b-7471-4ac6-9ef0-f06e99d77985",
                     "path": "<Touchscreen>/touch*/tap",
                     "interactions": "",
                     "processors": "",
                     "groups": "Mobile",
                     "action": "EndDrag",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ec7c055c-136a-430d-b154-158cb52d8be1",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mac",
+                    "action": "StartDrag",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1c382a2e-7993-4671-a8b3-470725e627d5",
+                    "path": "<Touchscreen>/touch*/tap",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mobile",
+                    "action": "StartDrag",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -930,6 +930,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1150951726, guid: d68db2b813a4f4923bfb6038f7fe4975, type: 3}
+      propertyPath: sqrSwipeDeadzone
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 7457771877463122484, guid: d68db2b813a4f4923bfb6038f7fe4975, type: 3}
       propertyPath: m_RootOrder
       value: 2
