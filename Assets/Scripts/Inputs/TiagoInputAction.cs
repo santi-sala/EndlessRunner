@@ -40,7 +40,7 @@ public class @TiagoInputAction : IInputActionCollection, IDisposable
                     ""id"": ""d8b4aceb-1e29-4a24-a1d9-f7caf8d65495"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": ""Press""
                 },
                 {
                     ""name"": ""EndDrag"",
@@ -48,21 +48,10 @@ public class @TiagoInputAction : IInputActionCollection, IDisposable
                     ""id"": ""6eba29bc-2cbe-4efb-844d-bf59eae7a165"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": ""Press(behavior=1)""
                 }
             ],
             ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""914034c4-261e-4d27-991c-d7f1c916fbbc"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Mac"",
-                    ""action"": ""Touch"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
                 {
                     ""name"": """",
                     ""id"": ""77427e25-5287-4a4b-86b3-63854b3392e1"",
@@ -76,12 +65,12 @@ public class @TiagoInputAction : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""1d3f3308-4805-4601-9177-8e0c613baac0"",
-                    ""path"": ""<Mouse>/position"",
+                    ""id"": ""a7bbec2e-7e9f-4593-9841-7cfdf25ec712"",
+                    ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Mac"",
-                    ""action"": ""TouchPosition"",
+                    ""action"": ""Touch"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -98,12 +87,12 @@ public class @TiagoInputAction : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""51fc5c3c-57e4-4684-b612-1ba6ade2fb00"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": ""Press"",
+                    ""id"": ""74441c5e-a428-4ed1-b378-e694d233d2b4"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Mac"",
-                    ""action"": ""StartDrag"",
+                    ""action"": ""TouchPosition"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -120,12 +109,12 @@ public class @TiagoInputAction : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""1ff74707-0570-41f7-826b-683c10d3666f"",
+                    ""id"": ""3d03c5f6-975f-4458-a9a1-b7375bd14ed9"",
                     ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": ""Press(behavior=1)"",
+                    ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Mac"",
-                    ""action"": ""EndDrag"",
+                    ""action"": ""StartDrag"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -136,6 +125,17 @@ public class @TiagoInputAction : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Mobile"",
+                    ""action"": ""EndDrag"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""21cc972b-a1f7-4321-ba74-1aafdd2402d0"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Mac"",
                     ""action"": ""EndDrag"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false

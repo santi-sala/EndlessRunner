@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.EnhancedTouch;
 
 public class InputManager : MonoBehaviour
 {
@@ -123,6 +124,7 @@ public class InputManager : MonoBehaviour
     public void OnEnable()
     {
         actionScheme.Enable();
+        //TouchSimulation.Enable();
     }
 
     public void OnDisable()
