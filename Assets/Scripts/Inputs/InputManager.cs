@@ -109,6 +109,7 @@ public class InputManager : MonoBehaviour
     private void OnStartDrag(InputAction.CallbackContext context)
     {
         startDrag = touchPosition;
+        Debug.Log("Start Drag: " + startDrag);
     }
 
     private void OnTapPosition(InputAction.CallbackContext context)

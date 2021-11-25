@@ -55,21 +55,10 @@ public class @TiagoInputAction : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""77427e25-5287-4a4b-86b3-63854b3392e1"",
-                    ""path"": ""<Touchscreen>/touch*/tap"",
+                    ""path"": ""<Touchscreen>/primaryTouch/press"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Mobile"",
-                    ""action"": ""Touch"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""a7bbec2e-7e9f-4593-9841-7cfdf25ec712"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Mac"",
                     ""action"": ""Touch"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -87,33 +76,11 @@ public class @TiagoInputAction : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""74441c5e-a428-4ed1-b378-e694d233d2b4"",
-                    ""path"": ""<Mouse>/position"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Mac"",
-                    ""action"": ""TouchPosition"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""8586611e-11c0-419e-b56b-707fb73ee1c4"",
-                    ""path"": ""<Touchscreen>/touch*/tap"",
+                    ""path"": ""<Touchscreen>/primaryTouch/press"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Mobile"",
-                    ""action"": ""StartDrag"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""3d03c5f6-975f-4458-a9a1-b7375bd14ed9"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Mac"",
                     ""action"": ""StartDrag"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -121,21 +88,10 @@ public class @TiagoInputAction : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""0ce28cfe-b4e8-4224-8657-5277c585dc55"",
-                    ""path"": ""<Touchscreen>/touch*/tap"",
+                    ""path"": ""<Touchscreen>/primaryTouch/press"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Mobile"",
-                    ""action"": ""EndDrag"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""21cc972b-a1f7-4321-ba74-1aafdd2402d0"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Mac"",
                     ""action"": ""EndDrag"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
