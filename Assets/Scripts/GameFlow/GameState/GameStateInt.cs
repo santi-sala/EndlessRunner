@@ -1,15 +1,38 @@
+using TMPro;
+using UnityEngine;
+
 public class GameStateInt : GameState
 {
+    public GameObject mainMenuUI;
+
+    [SerializeField] private TextMeshProUGUI highScoreText;
+    [SerializeField] private TextMeshProUGUI coinsText;
+
     public override void Construct()
     {
         GameManager._Instance.ChangeCamera(VirtualCameras.Init);
+
+        highScoreText.text = "Highscore: " + "TBD";
+        coinsText.text = "Coins: " + "TBD";
+
+        mainMenuUI.SetActive(true);
     }
 
-    public override void UpdateState()
+    public override void Destruct()
     {
-        if (InputManager.Instance._Tap)
-        {
-            motor.ChangeState(GetComponent<GameStateGame>());
-        }
+        mainMenuUI.SetActive(false);
+    }
+
+    public void OnPlayClick()
+    {
+        Debug.Log("Play button pressed!!!");
+        motor.ChangeState(GetComponent<GameStateGame>());
+
+    }
+
+    public void OnShopClick()
+    {
+        //motor.ChangeState(GetComponent<GameStateShop>());
+        Debug.Log("Shop State");
     }
 }
