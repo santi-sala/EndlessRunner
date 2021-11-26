@@ -24,6 +24,8 @@ public class TiagoMotor : MonoBehaviour
     // State --> Game
     private bool isPaused;
 
+    
+
     // Start
     private void Start()
     {
@@ -124,9 +126,27 @@ public class TiagoMotor : MonoBehaviour
         isPaused = false;
     }
 
+    public void ResetPlayer()
+    {
+        currentLane = 0;
+        //Debug.Log("Before reseting player: " + transform.position);
+        //Debug.Log("This is: " + this);
+
+        //You cannot move a object with character controller using transform.position, so firts disable it, move it , enable it back XD        
+        controller.enabled = false;
+        transform.position = Vector3.zero;
+        controller.enabled = true;
+
+        animator?.SetTrigger("Idle");
+        ChangeState(GetComponent<RunningState>());
+        PausePlayer();
+        //Debug.Log("After reseting player: " + transform.position);
+    }
+
     public void RespawnTiago()
     {
-        ChangeState(GetComponent<RespawnState>());        
+        ChangeState(GetComponent<RespawnState>());
+        GameManager._Instance.ChangeCamera(VirtualCameras.Respawn);
     }
 
 

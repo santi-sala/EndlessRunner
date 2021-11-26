@@ -1,5 +1,3 @@
-using System;
-
 public class GameStateDeath : GameState
 {
     public override void Construct()
@@ -21,12 +19,15 @@ public class GameStateDeath : GameState
 
     private void ResumeGame()
     {
-        GameManager._Instance.gameMotor.RespawnTiago();
         motor.ChangeState(GetComponent<GameStateGame>());
+        GameManager._Instance.gameMotor.RespawnTiago();
     }
 
     public void ToMenu()
     {
         motor.ChangeState(GetComponent<GameStateInt>());
+        GameManager._Instance.gameMotor.ResetPlayer();
+        GameManager._Instance.worldGeneration.ResetWorld();
+        
     }
 }

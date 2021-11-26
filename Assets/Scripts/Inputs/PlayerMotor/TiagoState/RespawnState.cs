@@ -19,7 +19,14 @@ public class RespawnState : BaseState
 
         tiagoMotor.verticalVelocity = 0.0f;
         tiagoMotor.currentLane = 0;
-        tiagoMotor.animator?.SetTrigger("Respawn"); 
+        tiagoMotor.animator?.SetTrigger("Respawn");
+
+        
+    }
+
+    public override void Destruct()
+    {
+        GameManager._Instance.ChangeCamera(VirtualCameras.Game);
     }
 
     public override Vector3 ProcessMotion()

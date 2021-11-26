@@ -41,13 +41,7 @@ public class WorldGeneration : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        ScanPosition();
-    }
-
-    private void ScanPosition()
+    public void ScanPosition()
     {
         float cameraPositionZ = cameraTransform.position.z;
 
@@ -93,7 +87,7 @@ public class WorldGeneration : MonoBehaviour
         worldChunksPool.Add(worldChunk);
     }
 
-    private void ResetWorld()
+    public void ResetWorld()
     {
         //REset the worldChunkSpawn z
         worldChunkSpawnZ = firstWorldChunkSpawnPosition;
