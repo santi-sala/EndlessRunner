@@ -13,17 +13,36 @@ public class GameStateGame : GameState
         GameManager._Instance.gameMotor.ResumePlayer();
         GameManager._Instance.ChangeCamera(VirtualCameras.Game);
 
-        coinCount.text = "XTBD";
-        scoreCount.text = "XTBD";
-
+        // Subscribing to change events (Action)        
+        GameStats._Instance.OnCollectedCoin += OnCoinCollection;
+        GameStats._Instance.OnScoreChange += OnChangingScore;
 
         gameUI.SetActive(true);
 
     }
 
+    private void OnCoinCollection(int amountCollected)
+    {
+        coinCount.text = amountCollected.ToString("0000");
+
+        //coinCount.text = GameStats._Instance.CoinsToText();
+    }
+
+    private void OnChangingScore(float score)
+    {
+        scoreCount.text = score.ToString("000000");
+
+        //scoreCount.text = GameStats._Instance.ScoreToText();
+        
+    }
+
     public override void Destruct()
     {
         gameUI.SetActive(false);
+
+        // UNsubscribing to change events (Action) 
+        GameStats._Instance.OnCollectedCoin -= OnCoinCollection;
+        GameStats._Instance.OnScoreChange -= OnChangingScore;
     }
 
     public override void UpdateState()

@@ -6,6 +6,9 @@ public class WorldChunk : MonoBehaviour
 
     public WorldChunk ShowWoprldChunk()
     {
+        // Respawning the coins
+        transform.gameObject.BroadcastMessage("OnShowWorldChunk", SendMessageOptions.DontRequireReceiver);
+
         gameObject.SetActive(true);
         return this;
     }

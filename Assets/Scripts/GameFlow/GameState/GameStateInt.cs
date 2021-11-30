@@ -25,8 +25,9 @@ public class GameStateInt : GameState
 
     public void OnPlayClick()
     {
-        Debug.Log("Play button pressed!!!");
+        //Debug.Log("Play button pressed!!!");
         motor.ChangeState(GetComponent<GameStateGame>());
+        GameStats._Instance.ResetSession();
 
     }
 
