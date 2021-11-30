@@ -18,15 +18,32 @@ public class GameStateDeath : GameState
     {
         base.Construct();
         GameManager._Instance.gameMotor.PausePlayer();
-        completeCircle.gameObject.SetActive(true);
 
         deahtTime = Time.time;
         deathUI.SetActive(true);
+        completeCircle.gameObject.SetActive(true);
 
-        highScore.text = "Highscore: " + "TBD";
-        currentScore.text = "684565324";
-        totalCoins.text = "Total coins: " + "TBD";
-        totalCoins.text = "654";
+        // Set highscore if needed
+        if (SaveManager._Instance.save.Highscore < (int)GameStats._Instance.score)
+        {
+            SaveManager._Instance.save.Highscore = (int)GameStats._Instance.score;
+            highScore.color = Color.yellow;
+            currentScore.color = Color.yellow;
+            highScore.text = "NEW HIGHSCORE!! " + SaveManager._Instance.save.Highscore;
+        }
+        else
+        {
+            highScore.color = Color.white;
+            currentScore.color = Color.white;
+            highScore.text = "Highscore: " + SaveManager._Instance.save.Highscore;
+        }
+
+        SaveManager._Instance.save.Coins += GameStats._Instance.currentCollectedCoins;
+        SaveManager._Instance.Save();
+
+        currentScore.text = GameStats._Instance.score.ToString("00000000");
+        totalCoins.text = "Total coins: " + SaveManager._Instance.save.Coins;
+        currentCoins.text = GameStats._Instance.currentCollectedCoins.ToString("00000");
             
     }
 
@@ -63,10 +80,10 @@ public class GameStateDeath : GameState
     }
 
     public void ToMenu()
-    {
+    {      
         motor.ChangeState(GetComponent<GameStateInt>());
         GameManager._Instance.gameMotor.ResetPlayer();
         GameManager._Instance.worldGeneration.ResetWorld();
-        
+        GameManager._Instance.scenaryGeneration.ResetWorld();        
     }
 }

@@ -12,8 +12,8 @@ public class GameStateInt : GameState
     {
         GameManager._Instance.ChangeCamera(VirtualCameras.Init);
 
-        highScoreText.text = "Highscore: " + "TBD";
-        coinsText.text = "Coins: " + "TBD";
+        highScoreText.text = "Highscore: " + SaveManager._Instance.save.Highscore.ToString();
+        coinsText.text = "Coins: " + SaveManager._Instance.save.Coins.ToString(); ;
 
         mainMenuUI.SetActive(true);
     }
