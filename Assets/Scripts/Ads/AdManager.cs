@@ -19,5 +19,6 @@ public class AdManager : MonoBehaviour
     public void ShowRewardedAd()
     {
         ShowOptions showOptions = new ShowOptions();
+        Advertisement.Show(rewardedVideoPlacementID, showOptions);
     }
 }
