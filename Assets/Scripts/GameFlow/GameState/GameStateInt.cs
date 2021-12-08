@@ -7,6 +7,7 @@ public class GameStateInt : GameState
 
     [SerializeField] private TextMeshProUGUI highScoreText;
     [SerializeField] private TextMeshProUGUI coinsText;
+    [SerializeField] private AudioClip menuLoopMusic;
 
     public override void Construct()
     {
@@ -16,6 +17,8 @@ public class GameStateInt : GameState
         coinsText.text = "Coins: " + SaveManager._Instance.save.Coins.ToString(); ;
 
         mainMenuUI.SetActive(true);
+
+        AudioManager._Instance.PlayMusicWithFade(menuLoopMusic, 0.5f);
     }
 
     public override void Destruct()

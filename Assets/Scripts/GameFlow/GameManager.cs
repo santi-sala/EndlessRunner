@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     public ScenaryGeneration scenaryGeneration;
     public GameObject[] cameras;
 
-
+    
     private GameState state;
 
 

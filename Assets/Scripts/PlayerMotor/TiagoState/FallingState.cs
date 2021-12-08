@@ -24,6 +24,16 @@ public class FallingState : BaseState
 
     public override void Transition()
     {
+        if (InputManager.Instance._SwipeLeft)
+        {
+            tiagoMotor.ChangeLane(-1);
+        }
+
+        if (InputManager.Instance._SwipeRight)
+        {
+            tiagoMotor.ChangeLane(1);
+        }
+
         if (tiagoMotor.isGrounded)
         {
             tiagoMotor.ChangeState(GetComponent<RunningState>());

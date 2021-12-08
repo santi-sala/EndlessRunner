@@ -15,6 +15,7 @@ public class GameStats : MonoBehaviour
     public int totalCoins;
     public int currentCollectedCoins;
     public float coinPoints = 10.0f;
+    public AudioClip coinSFX;
 
     // Internal cooldown
     private float lastScoreUpdate;
@@ -52,6 +53,7 @@ public class GameStats : MonoBehaviour
     {
         currentCollectedCoins++;
         OnCollectedCoin?.Invoke(currentCollectedCoins);
+        AudioManager._Instance.PlaySFX(coinSFX, 2.5f);
     }
 
     public void ResetSession()

@@ -17,6 +17,7 @@ public class TiagoMotor : MonoBehaviour
 
     public CharacterController controller;
     public Animator animator;
+    public AudioClip deathSFX;
 
     // State --> Player
     private BaseState state;
@@ -157,6 +158,7 @@ public class TiagoMotor : MonoBehaviour
 
         if (hitLayerName == "Death")
         {
+            AudioManager._Instance.PlaySFX(deathSFX, 2.5f);
             ChangeState(GetComponent<DeathState>());
         }
     }

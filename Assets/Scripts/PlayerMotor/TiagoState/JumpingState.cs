@@ -28,6 +28,16 @@ public class JumpingState : BaseState
 
     public override void Transition()
     {
+        if (InputManager.Instance._SwipeLeft)
+        {
+            tiagoMotor.ChangeLane(-1);
+        }
+
+        if (InputManager.Instance._SwipeRight)
+        {
+            tiagoMotor.ChangeLane(1);
+        }
+
         if (tiagoMotor.verticalVelocity < 0)
         {
             tiagoMotor.ChangeState(GetComponent<FallingState>());

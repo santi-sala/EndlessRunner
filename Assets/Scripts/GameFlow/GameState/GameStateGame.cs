@@ -6,6 +6,7 @@ public class GameStateGame : GameState
     public GameObject gameUI;
     [SerializeField] private TextMeshProUGUI coinCount;
     [SerializeField] private TextMeshProUGUI scoreCount;
+    [SerializeField] private AudioClip gameMusic;
 
     public override void Construct()
     {
@@ -18,6 +19,8 @@ public class GameStateGame : GameState
         GameStats._Instance.OnScoreChange += OnChangingScore;
 
         gameUI.SetActive(true);
+
+        AudioManager._Instance.PlayMusicWithFade(gameMusic, 0.5f);
 
     }
 

@@ -41,9 +41,9 @@ public class GameStateDeath : GameState
         SaveManager._Instance.save.Coins += GameStats._Instance.currentCollectedCoins;
         SaveManager._Instance.Save();
 
-        currentScore.text = GameStats._Instance.score.ToString("00000000");
+        currentScore.text = GameStats._Instance.score.ToString("00000");
         totalCoins.text = "Total coins: " + SaveManager._Instance.save.Coins;
-        currentCoins.text = GameStats._Instance.currentCollectedCoins.ToString("00000");
+        currentCoins.text = GameStats._Instance.currentCollectedCoins.ToString();
             
     }
 
