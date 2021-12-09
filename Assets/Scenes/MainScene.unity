@@ -2426,7 +2426,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &368803052
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2494,7 +2494,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1868746784}
         m_TargetAssemblyTypeName: GameStateDeath, Assembly-CSharp
-        m_MethodName: ResumeGame
+        m_MethodName: ShowAd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12046,6 +12046,7 @@ GameObject:
   - component: {fileID: 1868746784}
   - component: {fileID: 1868746786}
   - component: {fileID: 1868746787}
+  - component: {fileID: 1868746788}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -12182,6 +12183,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicVolume: 1
+--- !u!114 &1868746788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868746779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db77c114ece3045e8a48a86698348e4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameID: 4495897
+  rewardedVideoPlacementID: Rewarded_Android
+  testMode: 1
 --- !u!1 &1879554211
 GameObject:
   m_ObjectHideFlags: 0

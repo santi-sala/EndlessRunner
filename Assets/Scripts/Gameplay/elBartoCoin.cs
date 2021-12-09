@@ -17,6 +17,7 @@ public class elBartoCoin : MonoBehaviour
         if (collider.tag == "tiago")
         {
             CollectCoin();
+            
         }
     }
 
@@ -28,8 +29,9 @@ public class elBartoCoin : MonoBehaviour
 
     public void OnShowWorldChunk()
     {
-        //Debug.Log("K PASA");
+        //Debug.Log("K PASA");        
         animator?.SetTrigger("Idle");
+
     }
 
 }
