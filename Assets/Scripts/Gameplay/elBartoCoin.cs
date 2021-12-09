@@ -28,7 +28,7 @@ public class elBartoCoin : MonoBehaviour
 
     public void OnShowWorldChunk()
     {
-        Debug.Log("K PASA");
+        //Debug.Log("K PASA");
         animator?.SetTrigger("Idle");
     }
 

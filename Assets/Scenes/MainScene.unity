@@ -12045,6 +12045,7 @@ GameObject:
   - component: {fileID: 1868746783}
   - component: {fileID: 1868746784}
   - component: {fileID: 1868746786}
+  - component: {fileID: 1868746787}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -12081,6 +12082,7 @@ MonoBehaviour:
   mainMenuUI: {fileID: 818185165}
   highScoreText: {fileID: 358042946}
   coinsText: {fileID: 1842055145}
+  menuLoopMusic: {fileID: 8300000, guid: 4fe1496a814204216ae6196954a5e34b, type: 3}
 --- !u!114 &1868746782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12116,6 +12118,7 @@ MonoBehaviour:
   gameUI: {fileID: 1743490895}
   coinCount: {fileID: 54216921}
   scoreCount: {fileID: 1539847032}
+  gameMusic: {fileID: 8300000, guid: f2f87d2fa7f364ffd8b159fc013fff4a, type: 3}
 --- !u!114 &1868746784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12153,6 +12156,7 @@ MonoBehaviour:
   totalCoins: 0
   currentCollectedCoins: 0
   coinPoints: 10
+  coinSFX: {fileID: 8300000, guid: 94282f82a19fc4f819395cf25ab01bd5, type: 3}
 --- !u!114 &1868746786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12165,6 +12169,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aa18cf1f4e834263a6fc1adfa1e9605, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1868746787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868746779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99169ad8b552f428999b91d55f3c5531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicVolume: 1
 --- !u!1 &1879554211
 GameObject:
   m_ObjectHideFlags: 0
@@ -13985,6 +14002,10 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 341796767}
+    - target: {fileID: 1150951724, guid: d68db2b813a4f4923bfb6038f7fe4975, type: 3}
+      propertyPath: deathSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 8b76a074aa7074e4cb9c9a6191bbe270, type: 3}
     - target: {fileID: 1150951724, guid: d68db2b813a4f4923bfb6038f7fe4975, type: 3}
       propertyPath: controller
       value: 

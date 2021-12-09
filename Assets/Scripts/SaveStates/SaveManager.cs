@@ -40,7 +40,7 @@ public class SaveManager : MonoBehaviour
             file.Close();
 
             OnLoad?.Invoke(save);
-            Debug.Log("Loading Data!!");
+            //Debug.Log("Loading Data!!");
         }
         catch
         {
