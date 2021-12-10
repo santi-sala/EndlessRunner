@@ -4,8 +4,7 @@ public enum VirtualCameras
 {
     Init = 0,
     Game = 1,
-    Shop = 2,
-    Respawn = 3
+    Respawn = 2    
 
 }
 
