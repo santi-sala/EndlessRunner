@@ -2,10 +2,12 @@
 Endless runner project for mobile game course.
 
 ## Controls
-swipe up    -->  Jump;
-swipe down  -->  Slide;
-Swipe left  -->  Change current lane to left;
-Swipe right -->  Change current lane to right;
+| Swipe | Effects |
+| ------ | ------|
+| Swipe up | Jump |
+| Swipe down | Slide|
+| Swipe left | Change current lane to left|
+| Swipe right | Change current lane to right |
 
 ## Objective
 Collect as many coins as possible to be able tro buy character and cosmetics for yout characters. (Shop is not yet implemented XD). Make as much points as possible!!!
