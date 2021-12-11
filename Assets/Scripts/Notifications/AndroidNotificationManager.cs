@@ -14,10 +14,12 @@ public class AndroidNotificationManager : MonoBehaviour
     {
         CreateChannel(androidChannel);
         SendNotification();
-        if (AndroidNotificationCenter.CheckScheduledNotificationStatus(identifier) == NotificationStatus.Scheduled) 
+
+        if (AndroidNotificationCenter.CheckScheduledNotificationStatus(identifier) == NotificationStatus.Scheduled)
         {
             AndroidNotificationCenter.CancelAllNotifications();
-            AndroidNotificationCenter.SendNotification(notification, "channel_id");
+            CreateChannel(androidChannel);
+            SendNotification();
         }
     }
 
@@ -37,12 +39,9 @@ public class AndroidNotificationManager : MonoBehaviour
     {
         
         notification = new AndroidNotification("Lets play!!", "You currently have:" + SaveManager._Instance.save.Coins.ToString() + " coins.", System.DateTime.Now.AddSeconds(20));
-        //notification.Title;
-        //notification.Text;
-        //notification.FireTime;
-
+        
         identifier = AndroidNotificationCenter.SendNotification(notification, "channel_id");
-       
+
     }
 
 }
