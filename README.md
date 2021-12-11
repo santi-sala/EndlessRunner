@@ -13,9 +13,9 @@ Endless runner project for mobile game course.
 Collect as many coins as possible to be able tro buy character and cosmetics for yout characters. (Shop is not yet implemented XD). Make as much points as possible!!!
 
 ## Used unity packages:
--New input system 
--Cinemachine
--Mobile notifications
+- New input system 
+- Cinemachine
+- Mobile notifications
 
 ## Assets:
 - Apart from the music which is downloaded from dig.ccmixter.com or freesound.org, most of the assets are made by me using blender and photoshop.
